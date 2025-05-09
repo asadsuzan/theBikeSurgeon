@@ -4,6 +4,7 @@ import cors from "cors";
 
 import status from "http-status";
 import globalErrorHandler from "./app/middlewares/globalErrorHandler";
+import router from "./app/routes";
 const app: Application = express();
 app.use(cors());
 
