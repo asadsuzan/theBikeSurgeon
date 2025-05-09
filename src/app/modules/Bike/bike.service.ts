@@ -1,5 +1,7 @@
-import { Bike } from "@prisma/client";
+import { PrismaClient } from "@prisma/client";
 import prisma from '../../shared/prisma'
+
+type Bike = PrismaClient['bike']['create']['data'];
 
 const CreateBike = async (bikeData: Bike) => {
   const isCustomerExist = await prisma.customer.findUnique({
@@ -30,6 +32,7 @@ const GetBikeById = async (bikeId: string) => {
       bikeId,
     },
   });
+
 
   if (!isExist) {
     throw new Error("Bike Not Found.");
