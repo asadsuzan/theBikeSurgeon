@@ -7,7 +7,7 @@ router.post("/", ServiceDataController.CreateService);
 router.get("/status", ServiceDataController.fetchOverdueOrPendingServices);
 router.get("/", ServiceDataController.GetAllService);
 router.get("/:id", ServiceDataController.GetServiceById);
-router.put("/:id", ServiceDataController.UpdateServiceById);
+router.put("/:id/complete", ServiceDataController.UpdateServiceById);
 
 
 export const ServiceRoute = router;
