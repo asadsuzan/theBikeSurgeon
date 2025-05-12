@@ -1,6 +1,6 @@
-import { PrismaClient } from "@prisma/client";
+import { Customer, PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
-type Customer = PrismaClient["customer"]["create"]["data"];
+
 
 const CreateCustomer = async (customerData: Customer) => {
   const isExist = await prisma.customer.findFirst({

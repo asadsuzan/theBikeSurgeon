@@ -1,7 +1,7 @@
-import { PrismaClient } from "@prisma/client";
+import { Bike, PrismaClient } from "@prisma/client";
 import prisma from '../../shared/prisma'
 
-type Bike = PrismaClient['bike']['create']['data'];
+
 
 const CreateBike = async (bikeData: Bike) => {
   const isCustomerExist = await prisma.customer.findUnique({
