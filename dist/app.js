@@ -16,7 +16,7 @@ app.use(express_1.default.urlencoded({ extended: true }));
 app.use("/api", routes_1.default);
 app.use(globalErrorHandler_1.default);
 app.get("/", (req, res) => {
-    res.send("BikeCare-Hub Server is running");
+    res.send("Wellcome to The Bike Surgeon API");
 });
 app.use((req, res, next) => {
     res.status(http_status_1.default.NOT_FOUND).json({

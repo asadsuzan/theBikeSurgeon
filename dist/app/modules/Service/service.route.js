@@ -11,5 +11,5 @@ router.post("/", service_controller_1.ServiceDataController.CreateService);
 router.get("/status", service_controller_1.ServiceDataController.fetchOverdueOrPendingServices);
 router.get("/", service_controller_1.ServiceDataController.GetAllService);
 router.get("/:id", service_controller_1.ServiceDataController.GetServiceById);
-router.put("/:id", service_controller_1.ServiceDataController.UpdateServiceById);
+router.put("/:id/complete", service_controller_1.ServiceDataController.UpdateServiceById);
 exports.ServiceRoute = router;
