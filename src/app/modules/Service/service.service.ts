@@ -1,16 +1,5 @@
-enum ServiceStatus {
-  pending = "pending",
-  in_progress = "in_progress",
-  done = "done",
-}
 
-interface ServiceRecord {
-  serviceId: string;
-  bikeId: string;
-  serviceDate: Date;
-  status: ServiceStatus;
-  [key: string]: any; // Add other fields as per your schema
-}
+import { ServiceRecord, ServiceStatus } from "@prisma/client";
 import prisma from "../../shared/prisma";
 
 const CreateService = async (serviceData: ServiceRecord) => {
